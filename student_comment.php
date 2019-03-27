@@ -8,7 +8,7 @@ $choice = $_REQUEST[Constants::ACTION];
 
 switch ($choice){
 
-    case Constants::POST_LIKE_OR_DISLIKE:
+    case Constants::POST_COMMENT:
         //lamp.ms.wits.ac.za/~s1712776/student_comment.php?action=postLikeOrDislike&activity_id=1&student_username=asdf&activity_like_dislike=0
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
         $student_username = $_REQUEST[Constants::STUDENT_USERNAME];
