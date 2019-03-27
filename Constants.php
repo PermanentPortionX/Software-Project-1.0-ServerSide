@@ -32,7 +32,8 @@ class Constants {
     //SRC ACTIVITIES
     const ACTIVITY_TABLE = "ACTIVITIES";
     const ACTIVITY_ID = "activity_id";
-    const ACTIVITY_CURRENT = "activity_current";
+    const ACTIVITY_TITLE = "activity_title";
+    const ACTIVITY_DESC = "activity_desc";
     const ACTIVITY_POST_DATE = "activity_post_date";
     const ACTIVITY_POST_TIME = "activity_post_time";
 
