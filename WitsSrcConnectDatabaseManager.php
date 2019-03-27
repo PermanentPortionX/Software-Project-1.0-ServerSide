@@ -13,6 +13,18 @@ class WitsSrcConnectDatabaseManager {
         $this -> pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
+    function executeFetchStatement($stmt, $args){
+        try{
+            $execStmt = $this -> pdo -> prepare($stmt, $args);
+            if ($execStmt -> execute($args)) echo json_encode($execStmt -> fetchAll());
+            else echo Constants::DEFAULT_JSON;
+
+        }
+        catch (PDOException $e){
+            echo Constants::DEFAULT_JSON;
+        }
+    }
+
     function executeStatement($stmt, $args){
         try{
             $execStmt = $this -> pdo -> prepare($stmt);

@@ -54,6 +54,11 @@ switch($choice){
 
         break;
 
+    case Constants::READ_ALL_ACTIVITIES:
+
+
+        break;
+
     case Constants::UPDATE_ACTIVITY:
 
 

@@ -5,6 +5,7 @@ class Constants {
     const ACTION = "action";
     const SUCCESS = "1";
     const FAILED = "0";
+    const DEFAULT_JSON = "{}";
 
     //SRC MEMBER ACTIONS(DEFAULTS)
     const LOG_IN = "login";
