@@ -1,0 +1,49 @@
+<?php
+
+class Constants {
+    //project
+    const ACTION = "action";
+    const SUCCESS = "1";
+    const FAILED = "0";
+
+    //SRC MEMBER ACTIONS(DEFAULTS)
+    const LOG_IN = "login";
+    const UPDATE_PASS = "updatePass";
+
+    //SRC MEMBER ACTION(ACTIVITY)
+    const POST_ACTIVITY = "postActivity";
+    const UPDATE_ACTIVITY = "updateActivity";
+    const DELETE_ACTIVITY = "deleteActivity";
+    const READ_ALL_ACTIVITIES = "readAllActivities";
+
+    //SRC MEMBER ACTION(POLL)
+    const POST_POLL = "postPoll";
+    const DELETE_POLL = "deletePoll";
+    const UPDATE_POLL = "updatePoll";
+    const READ_ALL_POLLS = "readAllPolls";
+
+    //SRC MEMBER_TABLE
+    const SRC_MEMBER_TABLE = "SRC_MEMBER";
+    const SRC_MEMBER_USER = "member_username";
+    const SRC_MEMBER_PASS = "member_password";
+    const SRC_MEMBER_NEW_PASS = "member_new_pass";
+
+    //SRC ACTIVITIES
+    const ACTIVITY_TABLE = "ACTIVITIES";
+    const ACTIVITY_ID = "activity_id";
+    const ACTIVITY_CURRENT = "activity_current";
+    const ACTIVITY_POST_DATE = "activity_post_date";
+    const ACTIVITY_POST_TIME = "activity_post_time";
+
+    //ACTIVITIES LIKE AND DISLIKE
+    const ACTIVITIES_LIKE_DISLIKE_TABLE = "ACTIVITIES_LIKE_DISLIKE";
+    const ACTIVITY_LIKE_DISLIKE = "activity_like_dislike";
+
+    //ACTIVITIES COMMENTS
+    const STUDENT_USERNAME = "student_username";
+    const STUDENT_COMMENT = "student_comment";
+
+    //ACTIVITIES COMMENTS ACTIONS
+    const POST_COMMENT = "postComment";
+    const POST_LIKE_OR_DISLIKE = "postLikeOrDislike";
+}
