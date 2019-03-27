@@ -30,7 +30,7 @@ class Constants {
     const SRC_MEMBER_NEW_PASS = "member_new_pass";
 
     //SRC ACTIVITIES
-    const ACTIVITY_TABLE = "ACTIVITIES";
+    const ACTIVITY_TABLE = "SRC_ACTIVITY";
     const ACTIVITY_ID = "activity_id";
     const ACTIVITY_TITLE = "activity_title";
     const ACTIVITY_DESC = "activity_desc";
