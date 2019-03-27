@@ -43,8 +43,9 @@ class Constants {
 
     //ACTIVITIES COMMENTS
     const STUDENT_USERNAME = "student_username";
-    const STUDENT_COMMENT = "student_comment";
-    const STUDENT_COMMENT
+    const STUDENT_COMMENT = "stud_comment";
+    const STUDENT_DATE = stud_date;
+    const STUDENT_TIME = stud_time;
 
     //ACTIVITIES COMMENTS ACTIONS
     const POST_COMMENT = "postComment";
