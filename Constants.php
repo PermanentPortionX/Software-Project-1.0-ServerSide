@@ -42,8 +42,8 @@ class Constants {
     const ACTIVITY_LIKE_DISLIKE = "activity_like_dislike";
 
     //ACTIVITIES COMMENTS
-    const STUD_COMMENT = "COMMENT";
-    const STUDENT_USERNAME = "student_username";
+    const STUD_COMMENT_TABLE = "STUD_COMMENT";
+    const STUDENT_USERNAME = "stud_username";
     const STUDENT_COMMENT = "stud_comment";
     const STUDENT_DATE = "stud_date";
     const STUDENT_TIME = "stud_time";
