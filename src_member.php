@@ -57,7 +57,7 @@ switch($choice){
 
     case Constants::READ_ALL_ACTIVITIES:
             //mbuso
-
+            // this is the testing
         break;
 
     case Constants::UPDATE_ACTIVITY:
