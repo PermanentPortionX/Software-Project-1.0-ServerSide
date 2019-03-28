@@ -23,7 +23,8 @@ class Constants {
     const UPDATE_POLL = "updatePoll";
     const READ_ALL_POLLS = "readAllPolls";
 
-    const SRC_POLL_TABLE = "POLL";
+    //SRC POLL
+    const SRC_POLL_TABLE = "SRC_POLL";
     const POLL_ID = "poll_id";
     const POLL_TITLE ="poll_title";
     const POLL_DESC = "poll_desc";
