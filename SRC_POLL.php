@@ -7,6 +7,8 @@ $databaseManager = new WitsSrcConnectDatabaseManager();
 
 $choice = $_REQUEST[Constants::ACTION];
 
+
+http://lamp.ms.wits.ac.za/~s1712776/student_comment.php?action=POST_POLL&poll_id=0&member_username=asdf&poll_title=abc&poll_desc=dfdf1&poll_choices=12,34&stud_date=as&stud_time=abc
 switch ($choice){
     case Constants::POST_POLL;
         $poll_id = $_REQUEST[Constants::POLL_ID];
