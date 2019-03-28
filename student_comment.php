@@ -31,6 +31,7 @@ switch ($choice){
 
         $sql = "SELECT * FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI";
         $args = array(":AI" => $activity_id);
+        $databaseManager -> executeFetchStatement($sql, $args);
         break;
 
         //comment only
