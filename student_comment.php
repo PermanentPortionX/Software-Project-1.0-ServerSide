@@ -26,7 +26,13 @@ switch ($choice){
         $databaseManager -> executeStatement($stmt, $args);
         break;
 
-    case Constants::
+    case Constants::READ_COMMENT:
+        $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
+
+        $sql = "SELECT * FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI";
+
+        break;
+
         //comment only
         //test
 }
