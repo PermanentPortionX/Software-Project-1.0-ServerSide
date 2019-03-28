@@ -25,7 +25,7 @@ class Constants {
 
     const SRC_POLL_TABLE = "POLL";
     const POLL_ID = "poll_id";
-    const POLL_MSG = "poll_message";
+    const POLL_MSG = "member_username";
     const POLL_CHOICE="poll_choices";
     const POLL_DATE = "poll_date";
     const POLL_TIME = "poll_time";
