@@ -11,7 +11,7 @@ $choice = $_REQUEST[Constants::ACTION];
 
 switch ($choice){
     //http://lamp.ms.wits.ac.za/~s1712776/student_comment.php?action=postPoll&poll_id=0&member_username=asdf&poll_title=abc&poll_desc=dfdf1&poll_choices=12,34&stud_date=as&stud_time=abc
-    case Constants::POST_POLL;
+    case Constants::postPoll;
         $poll_id = $_REQUEST[Constants::POLL_ID];
         $member_username = $_REQUEST[Constants::SRC_MEMBER_USER];
         $poll_title = $_REQUEST[Constants::POLL_TITLE ];
