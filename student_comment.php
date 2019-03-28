@@ -27,7 +27,7 @@ switch ($choice){
         break;
 
     case Constants::READ_COMMENT:
-        //lamp.ms.wits.ac.za/~a1712776/student_comment.php
+        //lamp.ms.wits.ac.za/~s1712776/student_comment.php?action=readComment
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
 
         $sql = "SELECT * FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI";
