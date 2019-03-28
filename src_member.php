@@ -70,6 +70,7 @@ switch($choice){
 
             $stmt = "SELECT * FROM".Constants::STUD_COMMENT_TABLE;
             $args = array();
+            $databaseManager ->executeFetchStatement();
 
         break;
 
