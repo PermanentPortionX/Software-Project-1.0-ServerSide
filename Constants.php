@@ -23,6 +23,8 @@ class Constants {
     const UPDATE_POLL = "updatePoll";
     const READ_ALL_POLLS = "readAllPolls";
 
+    const POLL_ID = "poll_id";
+
     //SRC MEMBER_TABLE
     const SRC_MEMBER_TABLE = "SRC_MEMBER";
     const SRC_MEMBER_USER = "member_username";
@@ -54,5 +56,6 @@ class Constants {
     const READ_COMMENT = "readComment";
     const POST_LIKE_OR_DISLIKE = "postLikeOrDislike";
 
-    //Poll
+    //POLL Actions
+
 }
