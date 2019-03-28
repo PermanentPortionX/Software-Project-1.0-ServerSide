@@ -41,8 +41,8 @@ class Constants {
     const ACTIVITY_ID = "activity_id";
     const ACTIVITY_TITLE = "activity_title";
     const ACTIVITY_DESC = "activity_desc";
-    const ACTIVITY_POST_DATE = "activity_post_date";
-    const ACTIVITY_POST_TIME = "activity_post_time";
+    const ACTIVITY_DATE = "activity_date";
+    const ACTIVITY_TIME = "activity_time";
 
     //ACTIVITIES LIKE AND DISLIKE
     const ACTIVITIES_LIKE_DISLIKE_TABLE = "ACTIVITIES_LIKE_DISLIKE";
