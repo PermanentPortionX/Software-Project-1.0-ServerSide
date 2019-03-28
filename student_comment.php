@@ -35,6 +35,4 @@ switch ($choice){
         $databaseManager -> executeFetchStatement($sql, $args);
         break;
 
-    //comment only
-    //test
 }
