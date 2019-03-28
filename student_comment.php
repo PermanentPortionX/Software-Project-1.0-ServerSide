@@ -29,7 +29,7 @@ switch ($choice){
     case Constants::READ_COMMENT:
         //lamp.ms.wits.ac.za/~s1712776/student_comment.php?action=readComment
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
-    //Pull everything from database
+        //Pull everything from database
         $sql = "SELECT * FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI";
         $args = array(":AI" => $activity_id);
         $databaseManager -> executeFetchStatement($sql, $args);
