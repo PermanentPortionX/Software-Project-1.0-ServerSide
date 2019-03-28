@@ -9,7 +9,7 @@ $choice = $_REQUEST[Constants::ACTION];
 switch ($choice){
 
     case Constants::POST_COMMENT:
-        //lamp.ms.wits.ac.za/~s1712776/student_comment.php?action=postLikeOrDislike&activity_id=0&stud_username=asdf&stud_comment=abc&stud_date=as&stud_time=abc
+        //lamp.ms.wits.ac.za/~s1712776/student_comment.php?action=postComment&activity_id=0&stud_username=asdf&stud_comment=abc&stud_anonymity=1&stud_date=as&stud_time=abc
 
         //Declarations:
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
@@ -22,11 +22,12 @@ switch ($choice){
         $stmt = "INSERT INTO ".Constants::STUD_COMMENT_TABLE." VALUES (:AI, :SU, :SC, :SA, :SD, :ST)";
 
         $args = array(":AI" => $activity_id, ":SU" => $student_username, ":SC" => $stud_comment, ":SA" => $stud_anonymity,
-            ":SD" => $stud_date, ":SI" => $stud_time);
+            ":SD" => $stud_date, ":ST" => $stud_time);
         $databaseManager -> executeStatement($stmt, $args);
         break;
 
     case Constants::READ_COMMENT:
+        //lamp.ms.wits.ac.za/~a1712776/student_comment.php
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
 
         $sql = "SELECT * FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI";
@@ -34,6 +35,6 @@ switch ($choice){
         $databaseManager -> executeFetchStatement($sql, $args);
         break;
 
-        //comment only
-        //test
+    //comment only
+    //test
 }
