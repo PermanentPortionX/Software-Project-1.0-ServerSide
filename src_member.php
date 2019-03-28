@@ -66,6 +66,11 @@ switch($choice){
 
         break;
 
+    case Constants::READ_COMMENT:
+
+
+        break;
+
     case Constants::UPDATE_ACTIVITY:
         //test3
         //test4
