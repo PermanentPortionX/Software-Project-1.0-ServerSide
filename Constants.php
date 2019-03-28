@@ -35,7 +35,7 @@ class Constants {
     const ACTIVITY_TITLE = "activity_title";
     const ACTIVITY_DESC = "activity_desc";
     const ACTIVITY_DATE = "activity_date";
-    const ACTIVITY_POST_TIME = "activity_time";
+    const ACTIVITY_TIME = "activity_time";
 
     //ACTIVITIES LIKE AND DISLIKE
     const ACTIVITIES_LIKE_DISLIKE_TABLE = "ACTIVITIES_LIKE_DISLIKE";
