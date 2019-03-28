@@ -26,6 +26,7 @@ switch ($choice){
         $databaseManager -> executeStatement($stmt, $args);
         break;
 
+    case Constants::
         //comment only
         //test
 }

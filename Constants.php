@@ -51,5 +51,6 @@ class Constants {
 
     //ACTIVITIES COMMENTS ACTIONS
     const POST_COMMENT = "postComment";
+    const READ_COMMENT = "readComment";
     const POST_LIKE_OR_DISLIKE = "postLikeOrDislike";
 }
