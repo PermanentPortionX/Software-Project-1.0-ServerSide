@@ -68,7 +68,7 @@ switch($choice){
 
     case Constants::READ_COMMENT:
 
-            $stmt = "SELECT * FROM".Constants::STUD_COMMENT_TABLE;
+            $stmt = "SELECT".Constants::STUDENT_COMMENT."FROM".Constants::STUD_COMMENT_TABLE;
             $args = array();
             $databaseManager ->executeFetchStatement();
 
