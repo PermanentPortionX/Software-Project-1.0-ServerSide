@@ -68,6 +68,7 @@ switch($choice){
 
     case Constants::READ_COMMENT:
 
+            $stmt = "SELECT * FROM".Constants::STUD_COMMENT_TABLE;
 
         break;
 
