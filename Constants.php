@@ -49,7 +49,6 @@ class Constants {
     const STUDENT_DATE = "stud_date";
     const STUDENT_TIME = "stud_time";
 
-
     //ACTIVITIES COMMENTS ACTIONS
     const POST_COMMENT = "postComment";
     const READ_COMMENT = "readComment";
