@@ -58,7 +58,7 @@ switch($choice){
     case Constants::READ_ALL_ACTIVITIES:
             //Mbuso's section
             // upadte will be posted by 11
-            $stmt = "SELECT * FROM ".Constants::ACTIVITY_TABLE.;
+            $stmt = "SELECT * FROM ".Constants::ACTIVITY_TABLE;
             $args = array();
             $databaseManager -> executeFetchStatement($stmt, $args);
 
