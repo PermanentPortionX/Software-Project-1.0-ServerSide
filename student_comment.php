@@ -15,12 +15,14 @@ switch ($choice){
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
         $student_username = $_REQUEST[Constants::STUDENT_USERNAME];
         $stud_comment = $_REQUEST[Constants::STUDENT_COMMENT];
+        $stud_anonymity = $_REQUEST[Constants::STUDENT_ANONYMITY];
         $stud_date = $_REQUEST[Constants::STUDENT_DATE];
         $stud_time = $_REQUEST[Constants::STUDENT_TIME];
         //Insert the following values in the table
-        $stmt = "INSERT INTO ".Constants::STUD_COMMENT_TABLE." VALUES (:AI, :SU, :SC, :SD, :ST)";
+        $stmt = "INSERT INTO ".Constants::STUD_COMMENT_TABLE." VALUES (:AI, :SU, :SC, :SA, :SD, :ST)";
 
-        $args = array(":AI" => $activity_id, ":SU" => $student_username, ":SC" => $stud_comment, ":SD" => $stud_date, ":SI" => $stud_time);
+        $args = array(":AI" => $activity_id, ":SU" => $student_username, ":SC" => $stud_comment, ":SA" => $stud_anonymity,
+            ":SD" => $stud_date, ":SI" => $stud_time);
         $databaseManager -> executeStatement($stmt, $args);
         break;
 

@@ -45,6 +45,7 @@ class Constants {
     const STUD_COMMENT_TABLE = "STUD_COMMENT";
     const STUDENT_USERNAME = "stud_username";
     const STUDENT_COMMENT = "stud_comment";
+    const STUDENT_ANONYMITY = "stud_anonymity";
     const STUDENT_DATE = "stud_date";
     const STUDENT_TIME = "stud_time";
 
