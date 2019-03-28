@@ -17,9 +17,9 @@ switch ($choice){
         $poll_date = $_REQUEST[Constants::POLL_DATE];
         $poll_time = $_REQUEST[Constants::POLL_TIME];
 
-        $stmt = "INSERT INTO ".Constants::SRC_POLL_TABLE." VALUES (:PI, :MU, :PT, :PD, :PC, :PDD, PT)";
+        $stmt = "INSERT INTO ".Constants::SRC_POLL_TABLE." VALUES (:PI, :MU, :PT, :PD, :PC, :PDD, PTT)";
         $args = array(":PI" => $poll_id, ":MU" => $member_username, ":PT" => $poll_title, ":PD" => $poll_desc,
-            ":PC" => $poll_choices, ":PDD" => $poll_date, ":PT" => $poll_time);
+            ":PC" => $poll_choices, ":PDD" => $poll_date, ":PTT" => $poll_time);
         $databaseManager -> executeStatement($stmt, $args);
 
     break;
