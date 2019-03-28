@@ -57,6 +57,7 @@ switch($choice){
 
     case Constants::READ_ALL_ACTIVITIES:
             //mbuso
+            //this the second comment. Testing
 
         break;
 
