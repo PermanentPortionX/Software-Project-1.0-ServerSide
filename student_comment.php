@@ -31,6 +31,7 @@ switch ($choice){
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
         //Pull everything from database
         $sql = "SELECT * FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI";
+        //binds AI to activity
         $args = array(":AI" => $activity_id);
         $databaseManager -> executeFetchStatement($sql, $args);
 
