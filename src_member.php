@@ -62,6 +62,7 @@ switch($choice){
 
     case Constants::UPDATE_ACTIVITY:
         //test3
+        //test4
         break;
 
     case Constants::POST_POLL:
