@@ -16,6 +16,8 @@ switch ($choice){
         $poll_date = $_REQUEST[Constants::POLL_DATE];
         $poll_time = $_REQUEST[Constants::POLL_TIME];
 
+        $stmt = "INSERT INTO ".Constants::SRC_POLL_TABLE." VALUES (:MU, :PI, :PM, :PC, :PD, :PT)";
+
 
     break;
 }
