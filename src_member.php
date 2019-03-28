@@ -45,12 +45,12 @@ switch($choice){
         $member_username = $_REQUEST[Constants::SRC_MEMBER_USER];
         $activity_title = $_REQUEST[Constants::ACTIVITY_TITLE];
         $activity_desc = $_REQUEST[Constants::ACTIVITY_DESC];
-        $activity_post_date = $_REQUEST[Constants::ACTIVITY_DATE];
+        $activity_date = $_REQUEST[Constants::ACTIVITY_DATE];
         $activity_post_time = $_REQUEST[Constants::ACTIVITY_TIME];
 
         $stmt = "INSERT INTO ".Constants::ACTIVITY_TABLE." VALUES( :ID, :MU, :ATT, :AD, :APD, :APT)";
         $args = array(":ID" => $activity_id, ':MU' => $member_username, 'ATT' => $activity_title, ':AD' => $activity_desc, ':APD' =>
-            $activity_post_date, ':APT' => $activity_post_time);
+            $activity_date, ':APT' => $activity_post_time);
         $databaseManager -> executeStatement($stmt, $args);
 
         break;
