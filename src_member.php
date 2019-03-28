@@ -56,11 +56,9 @@ switch($choice){
         break;
 
     case Constants::READ_ALL_ACTIVITIES:
-        //To be continued
-            $member_username = $_REQUEST[Constants::SRC_MEMBER_USER];
-            $stmt = "SELECT * FROM ".Constants::ACTIVITY_TABLE;
-            $args = array();
-            $databaseManager -> executeFetchStatement($stmt, $args);
+        $stmt = "SELECT * FROM ".Constants::ACTIVITY_TABLE." ORDER BY ".Constants::ACTIVITY_ID;
+        $args = array();
+        $databaseManager -> executeFetchStatement($stmt, $args);
 
         break;
 
