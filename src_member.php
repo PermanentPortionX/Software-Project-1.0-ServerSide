@@ -41,6 +41,7 @@ switch($choice){
 
     case Constants::POST_ACTIVITY:
 
+        //lamp.ms.wits.ac.za/~s1712776/src_member.php?action=postActivity&member_username=srcpresident&activity_title=a&activity_desc=abc&activity_date=10/20/2019&activity_time=20:40
         $activity_id = 0;
         $member_username = $_REQUEST[Constants::SRC_MEMBER_USER];
         $activity_title = $_REQUEST[Constants::ACTIVITY_TITLE];
@@ -49,8 +50,7 @@ switch($choice){
         $activity_time = $_REQUEST[Constants::ACTIVITY_TIME];
 
         $stmt = "INSERT INTO ".Constants::ACTIVITY_TABLE." VALUES( :ID, :MU, :ATT, :AD, :APD, :APT)";
-        $args = array(":ID" => $activity_id, ':MU' => $member_username, ':ATT' => $activity_title, ':AD' => $activity_desc, ':APD' =>
-            $activity_date, ':APT' => $activity_time);
+        $args = array(':ID' => $activity_id, ':MU' => $member_username, ':ATT' => $activity_title, ':AD' => $activity_desc, ':APD' => $activity_date, ':APT' => $activity_time);
         $databaseManager -> executeStatement($stmt, $args);
 
         break;
