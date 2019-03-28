@@ -34,5 +34,4 @@ switch ($choice){
         $args = array(":AI" => $activity_id);
         $databaseManager -> executeFetchStatement($sql, $args);
         break;
-
 }
