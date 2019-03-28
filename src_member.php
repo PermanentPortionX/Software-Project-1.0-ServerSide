@@ -58,7 +58,7 @@ switch($choice){
     case Constants::READ_ALL_ACTIVITIES:
             //Mbuso's section
             // upadte will be posted by 11
-
+            $member_username = $_REQUEST[Constants::SRC_MEMBER_USER];
 
 
 
