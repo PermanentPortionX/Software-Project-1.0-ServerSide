@@ -56,22 +56,15 @@ switch($choice){
         break;
 
     case Constants::READ_ALL_ACTIVITIES:
-        $stmt = "SELECT * FROM ".Constants::ACTIVITY_TABLE." ORDER BY ".Constants::ACTIVITY_ID." DESC";;
+        $stmt = "SELECT * FROM ".Constants::ACTIVITY_TABLE." ORDER BY ".Constants::ACTIVITY_ID." DESC";
         $args = array();
         $databaseManager -> executeFetchStatement($stmt, $args);
 
         break;
 
-    case Constants::READ_COMMENT:
-
-            $stmt = "SELECT".Constants::STUDENT_COMMENT."FROM".Constants::STUD_COMMENT_TABLE; //we will need an activity_id to be specific about a comment
-            $args = array();
-            $databaseManager ->executeFetchStatement();
-
-        break;
-
     case Constants::UPDATE_ACTIVITY:
-
+        //test3
+        //test4
         break;
 
     case Constants::POST_POLL:
