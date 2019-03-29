@@ -12,7 +12,6 @@ switch ($choice){
         //lamp.ms.wits.ac.za/~s1712776/student_comment.php?action=postComment&activity_id=0&stud_username=asdf&stud_comment=abc&stud_anonymity=1&stud_date=as&stud_time=abc
 
         //Declarations:
-        //All names
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
         $student_username = $_REQUEST[Constants::STUDENT_USERNAME];
         $stud_comment = $_REQUEST[Constants::STUDENT_COMMENT];
@@ -28,11 +27,10 @@ switch ($choice){
         break;
 
     case Constants::READ_COMMENT:
-        //lamp.ms.wits.ac.za/~s1712776/student_comment.php?action=readComment
+        //lamp.ms.wits.ac.za/~a1712776/student_comment.php
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
-        //Pull everything from database
-        $sql = "SELECT * FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI";
-        //binds AI to activity
+
+        $sql = "SELECT * FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI ORDER BY ".Constants::STUDENT_DATE." DESC, ".Constants::STUDENT_TIME." DESC";
         $args = array(":AI" => $activity_id);
         $databaseManager -> executeFetchStatement($sql, $args);
         break;
