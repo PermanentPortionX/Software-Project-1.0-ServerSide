@@ -31,6 +31,7 @@ class Constants {
     const POLL_CHOICE="poll_choices";
     const POLL_DATE = "poll_date";
     const POLL_TIME = "poll_time";
+    const POLL_TYPE = "poll_type";
 
     //SRC MEMBER_TABLE
     const SRC_MEMBER_TABLE = "SRC_MEMBER";
