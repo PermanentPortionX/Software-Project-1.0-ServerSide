@@ -30,9 +30,9 @@ switch ($choice){
         //lamp.ms.wits.ac.za/~a1712776/student_comment.php
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
 
-        $sql = "SELECT * FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI ORDER BY ".Constants::STUDENT_DATE." DESC, ".Constants::STUDENT_TIME." DESC";
+        $stmt = "SELECT * FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI ORDER BY ".Constants::STUDENT_DATE." DESC, ".Constants::STUDENT_TIME." DESC";
         $args = array(":AI" => $activity_id);
-        $databaseManager -> executeFetchStatement($sql, $args);
+        $databaseManager -> executeFetchStatement($stmt, $args);
         break;
 
 }
