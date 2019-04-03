@@ -7,18 +7,19 @@ $databaseManager = new WitsSrcConnectDatabaseManager();
 $choice = $_REQUEST[Constants::ACTION];
 
 function memberExists($member_username){
+
     global $databaseManager;
 
     $member_Password = $_REQUEST[Constants::SRC_MEMBER_PASS];
     $stmt = "SELECT * FROM ".Constants::SRC_MEMBER_TABLE." WHERE ".Constants::SRC_MEMBER_USER." = :UN AND "
         .Constants::SRC_MEMBER_PASS." = :P";
     $args = array('UN' => $member_username, 'P' => $member_Password);
+
     return $databaseManager -> exists($stmt, $args);
 }
 
 switch($choice){
     case Constants::LOG_IN:
-
         $member_username = $_REQUEST[Constants::SRC_MEMBER_USER];
         if(memberExists($member_username)) echo Constants::SUCCESS;
         else echo Constants::FAILED;
@@ -85,3 +86,4 @@ switch($choice){
 
         break;
 }
+?>

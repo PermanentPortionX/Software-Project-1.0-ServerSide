@@ -7,10 +7,25 @@ class WitsSrcConnectDatabaseManager {
     private $pdo;
 
     function __construct() {
-        $this -> pdo = new PDO('mysql:dbname='.ServerInfo::database.';host='.ServerInfo::serverProxy.';charset=utf8',
-            ServerInfo::userName, ServerInfo::userPassword);
-        $this -> pdo -> setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-        $this -> pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $dbName = ServerInfo::database;
+        $host = ServerInfo::serverProxy;
+        $userName = ServerInfo::userName;
+        $userPass = ServerInfo::userPassword;
+
+        $dsn = "mysql:host=$host;dbname=$dbName;charset=utf8mb4";
+
+        $options = [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES => false,
+        ];
+
+        try {
+            $this -> pdo = new PDO($dsn, $userName, $userPass, $options);
+        }
+        catch (PDOException $e) {
+            echo $e -> getMessage();
+        }
     }
 
     function executeFetchStatement($stmt, $args){
@@ -33,18 +48,18 @@ class WitsSrcConnectDatabaseManager {
             else echo Constants::FAILED;
         }
         catch(PDOException $e){
-            echo Constants::FAILED;
+            echo $e -> getMessage();
         }
     }
 
     function exists($stmt, $args){
         try{
             $execStmt = $this -> pdo -> prepare($stmt);
-
             if($execStmt -> execute($args)) return $execStmt -> rowCount() > 0;
             else return false;
         }
         catch(PDOException $e){
+            echo $e -> getMessage();
             return false;
         }
 
