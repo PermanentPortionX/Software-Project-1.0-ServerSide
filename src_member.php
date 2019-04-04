@@ -57,7 +57,7 @@ switch($choice){
         break;
 
     case Constants::READ_ALL_ACTIVITIES:
-        $stmt = "SELECT * FROM ".Constants::ACTIVITY_TABLE." ORDER BY ".Constants::ACTIVITY_ID." DESC";
+        $stmt = "SELECT * FROM ".Constants::ACTIVITY_TABLE." ORDER BY ".Constants::ACTIVITY_DATE." , ".Constants::ACTIVITY_TIME." DESC";
         $args = array();
         $databaseManager -> executeFetchStatement($stmt, $args);
 
