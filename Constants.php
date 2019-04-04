@@ -7,6 +7,14 @@ class Constants {
     const FAILED = "0";
     const DEFAULT_JSON = "{}";
 
+    //student
+    const STUDENT_USER = "USERNAME";
+    const STUDENT_PASS = "PASSWORD";
+
+    //LDAP
+    const NAME = "name";
+    const SURNAME = "surname";
+
     //SRC MEMBER ACTIONS(DEFAULTS)
     const LOG_IN = "login";
     const UPDATE_PASS = "updatePass";

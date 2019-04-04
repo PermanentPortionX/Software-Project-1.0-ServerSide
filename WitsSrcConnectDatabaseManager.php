@@ -7,12 +7,7 @@ class WitsSrcConnectDatabaseManager {
     private $pdo;
 
     function __construct() {
-        $dbName = ServerInfo::database;
-        $host = ServerInfo::serverProxy;
-        $userName = ServerInfo::userName;
-        $userPass = ServerInfo::userPassword;
-
-        $dsn = "mysql:host=$host;dbname=$dbName;charset=utf8mb4";
+        $dsn = "mysql:host=".ServerInfo::serverProxy.";dbname=".ServerInfo::database.";charset=utf8mb4";
 
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -21,11 +16,15 @@ class WitsSrcConnectDatabaseManager {
         ];
 
         try {
-            $this -> pdo = new PDO($dsn, $userName, $userPass, $options);
+            $this -> pdo = new PDO($dsn, ServerInfo::userName, ServerInfo::userPassword, $options);
         }
         catch (PDOException $e) {
             echo $e -> getMessage();
         }
+    }
+
+    function __destruct(){
+        $this -> pdo = null;
     }
 
     function executeFetchStatement($stmt, $args){
