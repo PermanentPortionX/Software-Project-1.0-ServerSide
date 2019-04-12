@@ -26,7 +26,7 @@ switch($choice){
         break;
 
     case Constants::READ_ALL_POLLS:
-        $stmt = "SELECT * FROM ".Constants::SRC_POLL_TABLE;
+        $stmt = "SELECT * FROM ".Constants::SRC_POLL_TABLE." ORDER BY ".Constants::POLL_ID." DESC";
         $args = array();
         $databaseManager -> executeFetchStatement($stmt, $args);
         break;
