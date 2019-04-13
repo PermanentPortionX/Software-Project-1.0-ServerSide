@@ -75,6 +75,7 @@ switch($choice){
         break;
 
     case Constants::DELETE_ACTIVITY:
+        //1627982.ms.wits.ac.za/~student/src_member.php?action=deleteActivity&activity_id=3
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
         $stmt = "DELETE FROM ".Constants::ACTIVITY_TABLE." WHERE ".Constants::ACTIVITY_ID." = :ID";
         $args = array(':ID' => $activity_id);
