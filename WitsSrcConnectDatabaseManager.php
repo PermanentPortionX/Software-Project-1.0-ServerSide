@@ -39,12 +39,18 @@ class WitsSrcConnectDatabaseManager {
         }
     }
 
-    function executeStatement($stmt, $args){
+    function executeStatement($stmt, $args, $provideFeedBack){
         try{
             $execStmt = $this -> pdo -> prepare($stmt);
 
-            if($execStmt -> execute($args)) echo Constants::SUCCESS;
-            else echo Constants::FAILED;
+            if($execStmt -> execute($args)){
+                if ($provideFeedBack) return true;
+                else echo Constants::SUCCESS;
+            }
+            else {
+                if ($provideFeedBack) return false;
+                else echo Constants::FAILED;
+            }
         }
         catch(PDOException $e){
             echo $e -> getMessage();

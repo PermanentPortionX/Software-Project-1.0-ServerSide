@@ -34,7 +34,7 @@ switch($choice){
             $stmt = "UPDATE ".Constants::SRC_MEMBER_TABLE." SET ".Constants::SRC_MEMBER_PASS." = :P WHERE "
                 .Constants::SRC_MEMBER_USER." = :UN";
             $args = array('P' => $member_newPassword, 'UN' => $member_username);
-            $databaseManager -> executeStatement($stmt, $args);
+            $databaseManager -> executeStatement($stmt, $args, false);
         }
         else echo Constants::FAILED;
 
@@ -52,7 +52,7 @@ switch($choice){
 
         $stmt = "INSERT INTO ".Constants::ACTIVITY_TABLE." VALUES( :ID, :MU, :ATT, :AD, :APD, :APT)";
         $args = array(':ID' => $activity_id, ':MU' => $member_username, ':ATT' => $activity_title, ':AD' => $activity_desc, ':APD' => $activity_date, ':APT' => $activity_time);
-        $databaseManager -> executeStatement($stmt, $args);
+        $databaseManager -> executeStatement($stmt, $args, false);
 
         break;
 
@@ -71,7 +71,7 @@ switch($choice){
         $stmt = "UPDATE ".Constants::ACTIVITY_TABLE." SET ".Constants::ACTIVITY_TITLE." = :ATT, ".Constants::ACTIVITY_DESC." = :AD WHERE "
             .Constants::ACTIVITY_ID." = :ID";
         $args = array(':ID' => $activity_id, ':ATT' => $activity_title, ':AD' => $activity_desc);
-        $databaseManager -> executeStatement($stmt, $args);
+        $databaseManager -> executeStatement($stmt, $args, false);
         break;
 
     case Constants::DELETE_ACTIVITY:
@@ -79,6 +79,6 @@ switch($choice){
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
         $stmt = "DELETE FROM ".Constants::ACTIVITY_TABLE." WHERE ".Constants::ACTIVITY_ID." = :ID";
         $args = array(':ID' => $activity_id);
-        $databaseManager -> executeStatement($stmt, $args);
+        $databaseManager -> executeStatement($stmt, $args, false);
         break;
 }

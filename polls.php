@@ -21,7 +21,7 @@ switch($choice){
         $stmt = "INSERT INTO ".Constants::SRC_POLL_TABLE." VALUES (:PI, :MU, :PT, :PD, :PC, :PTY, :PDD, :PTT)";
         $args = array(":PI" => $poll_id, ":MU" => $member_username, ":PT" => $poll_title, ":PD" => $poll_desc,
             ":PC" => $poll_choices, ":PTY" => $poll_type, ":PDD" => $poll_date, ":PTT" => $poll_time);
-        $databaseManager -> executeStatement($stmt, $args);
+        $databaseManager -> executeStatement($stmt, $args, false);
 
         break;
 

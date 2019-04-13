@@ -23,7 +23,7 @@ switch ($choice){
 
         $args = array(":AI" => $activity_id, ":SU" => $student_username, ":SC" => $stud_comment, ":SA" => $stud_anonymity,
             ":SD" => $stud_date, ":ST" => $stud_time);
-        $databaseManager -> executeStatement($stmt, $args);
+        $databaseManager -> executeStatement($stmt, $args, false);
         break;
 
     case Constants::READ_COMMENT:
