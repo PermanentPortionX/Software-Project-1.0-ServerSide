@@ -76,6 +76,8 @@ switch($choice){
 
     case Constants::DELETE_ACTIVITY:
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
-
+        $stmt = "DELETE FROM ".Constants::ACTIVITY_TABLE." WHERE ".Constants::ACTIVITY_ID." = :ID";
+        $args = array(':ID' => $activity_id);
+        $databaseManager -> executeStatement($stmt, $args);
         break;
 }
