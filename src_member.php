@@ -77,8 +77,14 @@ switch($choice){
     case Constants::DELETE_ACTIVITY:
         //1627982.ms.wits.ac.za/~student/src_member.php?action=deleteActivity&activity_id=3
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
-        $stmt = "DELETE FROM ".Constants::ACTIVITY_TABLE." WHERE ".Constants::ACTIVITY_ID." = :ID";
+        $deleteCommentsStmt = "DELETE FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :ID";
         $args = array(':ID' => $activity_id);
-        $databaseManager -> executeStatement($stmt, $args, false);
+
+        if ($databaseManager -> executeStatement($deleteCommentsStmt, $args, true)){
+            $stmt = "DELETE FROM ".Constants::ACTIVITY_TABLE." WHERE ".Constants::ACTIVITY_ID." = :ID";
+            $databaseManager -> executeStatement($stmt, $args, false);
+        }
+        else echo Constants::FAILED;
+
         break;
 }
