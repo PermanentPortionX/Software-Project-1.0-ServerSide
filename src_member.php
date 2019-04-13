@@ -64,9 +64,18 @@ switch($choice){
         break;
 
     case Constants::UPDATE_ACTIVITY:
-        //test3
-        //test4
+        $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
+        $activity_title = $_REQUEST[Constants::ACTIVITY_TITLE];
+        $activity_desc = $_REQUEST[Constants::ACTIVITY_DESC];
+
+        $stmt = "UPDATE ".Constants::ACTIVITY_TABLE." SET ".Constants::ACTIVITY_TITLE." = :ATT, ".Constants::ACTIVITY_DESC." = :AD WHERE "
+            .Constants::ACTIVITY_ID." = :ID";
+        $args = array(':ID' => $activity_id, ':ATT' => $activity_title, ':AD' => $activity_desc);
+        $databaseManager -> executeStatement($stmt, $args);
         break;
 
+    case Constants::DELETE_ACTIVITY:
+        $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
 
+        break;
 }
