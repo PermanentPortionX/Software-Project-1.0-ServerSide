@@ -9,7 +9,7 @@ $choice = $_REQUEST[Constants::ACTION];
 switch ($choice){
 
     case Constants::POST_COMMENT:
-        //lamp.ms.wits.ac.za/~s1712776/student_comment.php?action=postComment&activity_id=0&stud_username=asdf&stud_comment=abc&stud_anonymity=1&stud_date=as&stud_time=abc
+        //http://1627982.ms.wits.ac.za/~student/student_comment.php?action=postComment&activity_id=0&stud_username=asdf&stud_comment=abc&stud_anonymity=1&stud_date=as&stud_time=abc
 
         //Declarations:
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
@@ -27,7 +27,7 @@ switch ($choice){
         break;
 
     case Constants::READ_COMMENT:
-        //lamp.ms.wits.ac.za/~a1712776/student_comment.php
+        //http://1627982.ms.wits.ac.za/~student/src_member.php?action=deleteActivity&activity_id=3
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
 
         $stmt = "SELECT * FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI ORDER BY ".Constants::STUDENT_DATE." , ".Constants::STUDENT_TIME." DESC";
