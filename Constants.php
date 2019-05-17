@@ -58,6 +58,7 @@ class Constants {
     //ACTIVITIES LIKE AND DISLIKE
     const ACTIVITIES_LIKE_DISLIKE_TABLE = "ACTIVITIES_LIKE_DISLIKE";
     const ACTIVITY_LIKE_DISLIKE = "activity_like_dislike";
+    const STUDENT_ID = "student_id";
 
     //ACTIVITIES COMMENTS
     const STUD_COMMENT_TABLE = "STUD_COMMENT";

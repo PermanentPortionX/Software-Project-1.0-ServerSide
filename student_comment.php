@@ -35,4 +35,21 @@ switch ($choice){
         $databaseManager -> executeFetchStatement($stmt, $args);
         break;
 
+    case Constants::POST_LIKE_OR_DISLIKE:
+        $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
+        $student_username = $_REQUEST[Constants::STUDENT_USERNAME];
+        $like_dislike =  $_REQUEST[Constants::ACTIVITY_LIKE_DISLIKE];
+        //Search with this query
+        $stmt = "SELECT * FROM".Constants::ACTIVITIES_LIKE_DISLIKE_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI AND ".Constants::STUDENT_USERNAME." = :UI ";
+
+        if(mysqli_num_rows($stmt) > 0 ){
+            $stmt2 = "UPDATE ".Constants::ACTIVITIES_LIKE_DISLIKE_TABLE." SET ".Constants::ACTIVITY_LIKE_DISLIKE." = :LD WHERE ".Constants::ACTIVITY_ID." = :AI AND ".Constants::STUDENT_USERNAME." = :UI ";
+            $args = array(":AI" => $activity_id, ":UI" => $student_username, ":LD" => $like_dislike);
+            $databaseManager ->executeStatement($stmt2, $args, false);
+        }else{
+            $stmt3 = "INSERT INTO ".Constants::ACTIVITIES_LIKE_DISLIKE_TABLE." VALUES (:AI, :UI, :LD)";
+            $args = array(":AI" => $activity_id,":UI" => $student_username,":LD" => $like_dislike);
+            $databaseManager ->executeStatement($stmt3, $args, false);
+        }
+        break;
 }
