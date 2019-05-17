@@ -30,6 +30,8 @@ class Constants {
     const DELETE_POLL = "deletePoll";
     const UPDATE_POLL = "updatePoll";
     const READ_ALL_POLLS = "readAllPolls";
+    const POST_POLL_VOTE = "postPollVote";
+    const STUD_POLL_TABLE = "studPollTable";
 
     //SRC POLL
     const SRC_POLL_TABLE = "SRC_POLL";
