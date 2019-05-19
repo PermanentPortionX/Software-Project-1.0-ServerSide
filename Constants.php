@@ -74,6 +74,8 @@ class Constants {
     const POST_COMMENT = "postComment";
     const READ_COMMENT = "readComment";
     const POST_LIKE_OR_DISLIKE = "postLikeOrDislike";
+    const GET_LD_STATUS = "LikeDislikeStatus";
+    const POST_STATUS = "PostStatus";
 
     //POLL Actions
 

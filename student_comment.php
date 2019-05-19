@@ -27,7 +27,7 @@ switch ($choice){
         break;
 
     case Constants::READ_COMMENT:
-        //http://1627982.ms.wits.ac.za/~student/src_member.php?action=deleteActivity&activity_id=3
+        //1627982.ms.wits.ac.za/~student/student_comment.php?action=readComment&activity_id=1
         $activity_id = $_REQUEST[Constants::ACTIVITY_ID];
 
         $stmt = "SELECT * FROM ".Constants::STUD_COMMENT_TABLE." WHERE ".Constants::ACTIVITY_ID." = :AI ORDER BY ".Constants::STUDENT_DATE." , ".Constants::STUDENT_TIME." DESC";
@@ -52,4 +52,5 @@ switch ($choice){
             $databaseManager ->executeStatement($stmt3, $args, false);
         }
         break;
+
 }
