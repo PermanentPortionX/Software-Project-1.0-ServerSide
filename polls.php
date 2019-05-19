@@ -36,12 +36,12 @@ switch($choice){
         $student_id = $_REQUEST[Constants::STUDENT_USERNAME]; //OR IS IT STUDENT_ID? AND WHAT IS THE DIFFERENCE?
         $poll_choices = $_REQUEST[Constants::POLL_CHOICE];
 
-        $stmt = "SELECT * FROM".Constants::STUD_POLL_TABLE."WHERE ".Constants::POLL_ID."= :PI AND ".Constants::STUDENT_USERNAME."= :SI ";
+        $stmt = "SELECT * FROM".Constants::SRC_POLL_TABLE."WHERE ".Constants::POLL_ID."= :PI AND ".Constants::STUDENT_USERNAME."= :SI ";
 
         if(mysqli_num_rows($stmt) > 0){
             echo "Already voted";
         }else{
-            $stmt = "INSERT INTO ".Constants::STUD_POLL_TABLE." VALUES(:PI, :SI, :PC) ";
+            $stmt = "INSERT INTO ".Constants::SRC_POLL_TABLE." VALUES(:PI, :SI, :PC) ";
             $args = array(":PI"=> $poll_id, ":SI"=>$student_id, ":PC"=>$poll_choices);
             $databaseManager ->executeStatement($stmt, $args, false);
 

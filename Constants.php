@@ -31,7 +31,6 @@ class Constants {
     const UPDATE_POLL = "updatePoll";
     const READ_ALL_POLLS = "readAllPolls";
     const POST_POLL_VOTE = "postPollVote";
-    const STUD_POLL_TABLE = "studPollTable";
 
     //SRC POLL
     const SRC_POLL_TABLE = "SRC_POLL";
@@ -58,9 +57,9 @@ class Constants {
     const ACTIVITY_TIME = "activity_time";
 
     //ACTIVITIES LIKE AND DISLIKE
-    const ACTIVITIES_LIKE_DISLIKE_TABLE = "ACTIVITIES_LIKE_DISLIKE";
-    const ACTIVITY_LIKE_DISLIKE = "activity_like_dislike";
+    const STUD_LIKE_DISLIKE = "studLikeDislike";
     const STUDENT_ID = "student_id";
+    const STUD_LIKE_DISLIKE_TABLE = "STUD_LIKE_DISLIKE";
 
     //ACTIVITIES COMMENTS
     const STUD_COMMENT_TABLE = "STUD_COMMENT";
@@ -73,7 +72,7 @@ class Constants {
     //ACTIVITIES COMMENTS ACTIONS
     const POST_COMMENT = "postComment";
     const READ_COMMENT = "readComment";
-    const POST_LIKE_OR_DISLIKE = "postLikeOrDislike";
+    const POST_LIKE_OR_DISLIKE = "postLikeDislike";
     const GET_LD_STATUS = "LikeDislikeStatus";
     const POST_STATUS = "PostStatus";
 
